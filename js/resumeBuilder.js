@@ -1,3 +1,4 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
+var aweTht = "I am Ben and I am awesome.";
+var funTht = aweTht.replace("awesome","fun");
+console.log(aweTht);
+$("#main").append([funTht]);
