@@ -10,10 +10,17 @@ var bio = {
 }
 
 var work = {
+    "employers":[ {
+        "name": "Nutanix",
+        "position": "Sr. Manager, Technical Publications",
+        "years": "November 2011-Present"
+    },
+    {
+        "name": "Citrix",
+        "position": "Principal Courseware Developer, Education",
+        "years": "2007-2011"
+    }]
 };
-work.position = "Sr. Manager, Technical Publications";
-work.employer = "Nutanix";
-work.years = "November 2011-Present";
 
 var education = {
     "schools":[ {
@@ -21,7 +28,8 @@ var education = {
         "city": "Moscow, ID",
         "degree": "B.A.",
         "major": "English"
-    }, {
+    },
+    {
         "name": "San Jose State University",
         "city": "San Jose",
         "degree": "M.A.",
@@ -29,21 +37,15 @@ var education = {
     }]
 };
 
-
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-$("#header").prepend(formattedRole);
-
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").prepend(formattedName);
-
-var formattedContact = HTMLemail.replace("%data%", bio.contacts.email);
-$("#header").append(formattedContact);
-
-var formattedPhoto = HTMLbioPic.replace("%data%", bio.photo);
-$("#header").append(formattedPhoto);
-
-var formattedSkills = HTMLskills.replace("%data%", bio.skills);
-$("#main").append(formattedSkills);
-
-$("#main").append(work[ "position"]);
-$("#main").append(education.name);
+var projects = {
+    "projects":[ {
+        "name": "API documentation",
+        "description": "Slate for new APIs",
+        "url": "http://bcolborn.github.io/slate/"
+    },
+    {
+        "name": "Nutanix support portal",
+        "description": "Single location for support and documenation",
+        "url": "https://portal.nutanix.com/#/page/docs"
+    }]
+}
