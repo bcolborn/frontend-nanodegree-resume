@@ -9,6 +9,27 @@ var bio = {
     "photo": "images/me.jpg"
 }
 
+var work = {
+};
+work.position = "Sr. Manager, Technical Publications";
+work.employer = "Nutanix";
+work.years = "November 2011-Present";
+
+var education = {
+    "schools":[ {
+        "name": "University of Idaho",
+        "city": "Moscow, ID",
+        "degree": "B.A.",
+        "major": "English"
+    }, {
+        "name": "San Jose State University",
+        "city": "San Jose",
+        "degree": "M.A.",
+        "major": "TESOL"
+    }]
+};
+
+
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").prepend(formattedRole);
 
@@ -24,3 +45,5 @@ $("#header").append(formattedPhoto);
 var formattedSkills = HTMLskills.replace("%data%", bio.skills);
 $("#main").append(formattedSkills);
 
+$("#main").append(work[ "position"]);
+$("#main").append(education.name);
