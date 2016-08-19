@@ -9,17 +9,21 @@ var bio = {
     "photo": "images/me.jpg"
 }
 
-var work = [ 
-    {
-        "name": "Nutanix",
-        "position": "Sr. Manager, Technical Publications",
-        "years": "November 2011-Present"
-    },
-    {
-        "name": "Citrix",
-        "position": "Principal Courseware Developer, Education",
-        "years": "2007-2011"
-    }];
+var work =[ {
+    "name": "Nutanix, Inc.",
+    "position": "Sr. Manager, Technical Publications",
+    "location": "San Jose, CA",
+    "dates": "November 2011-Present",
+    "desc": "Built technical publications department from one technical writer (myself) to \
+    eight writers in two locations (San Jose and Bangalore), plus an illustrator and a production specialist."
+},
+{
+    "name": "Citrix Systems, Inc.",
+    "position": "Principal Courseware Developer, Education",
+    "location": "Santa Clara, CA",
+    "dates": "August 2007-October 2011",
+    "desc": "Developed course material for Citrix virtualization technologies."
+}];
 
 var education = {
     "schools":[ {
@@ -58,12 +62,10 @@ $("#header").prepend(fmtName);
 if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
     
-    var fmtSkill = HTMLskills.replace("%data%", bio.skills[0]);
-    $("#skills").append(fmtSkill); 
-    fmtSkill = HTMLskills.replace("%data%", bio.skills[1]);
-    $("#skills").append(fmtSkill); 
-    fmtSkill = HTMLskills.replace("%data%", bio.skills[2]);
-    $("#skills").append(fmtSkill); 
+    for (skill in bio.skills) {
+        var fmtSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+        $("#skills").append(fmtSkill);
+    }
 }
 
 for (job in work) {
@@ -72,4 +74,13 @@ for (job in work) {
     var fmtEmployer = HTMLworkEmployer.replace("%data%", work[job].name);
     var fmtTitle = HTMLworkTitle.replace("%data%", work[job].position);
     $(".work-entry:last").append(fmtEmployer + fmtTitle);
+    
+    var fmtDates = HTMLworkDates.replace("%data%", work[job].dates)
+    $(".work-entry:last").append(fmtDates);
+    
+    var fmtLocation = HTMLworkLocation.replace("%data%", work[job].location);
+    $(".work-entry:last").append(fmtLocation);
+    
+    var fmtDescription = HTMLworkDescription.replace("%data%", work[job].desc);
+    $(".work-entry:last").append(fmtDescription);
 }
