@@ -9,8 +9,8 @@ var bio = {
     "photo": "images/me.jpg"
 }
 
-var work = {
-    "employers":[ {
+var work = [ 
+    {
         "name": "Nutanix",
         "position": "Sr. Manager, Technical Publications",
         "years": "November 2011-Present"
@@ -19,8 +19,7 @@ var work = {
         "name": "Citrix",
         "position": "Principal Courseware Developer, Education",
         "years": "2007-2011"
-    }]
-};
+    }];
 
 var education = {
     "schools":[ {
@@ -50,19 +49,27 @@ var projects = {
     }]
 }
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var fmtName = HTMLheaderName.replace("%data%", bio.name);
+var fmtRole = HTMLheaderRole.replace("%data%", bio.role);
 
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+$("#header").prepend(fmtRole);
+$("#header").prepend(fmtName);
 
 if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
     
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-    $("#skills").append(formattedSkill); 
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-    $("#skills").append(formattedSkill); 
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-    $("#skills").append(formattedSkill); 
+    var fmtSkill = HTMLskills.replace("%data%", bio.skills[0]);
+    $("#skills").append(fmtSkill); 
+    fmtSkill = HTMLskills.replace("%data%", bio.skills[1]);
+    $("#skills").append(fmtSkill); 
+    fmtSkill = HTMLskills.replace("%data%", bio.skills[2]);
+    $("#skills").append(fmtSkill); 
+}
+
+for (job in work) {
+    $("#workExperience").append(HTMLworkStart);
+    
+    var fmtEmployer = HTMLworkEmployer.replace("%data%", work[job].name);
+    var fmtTitle = HTMLworkTitle.replace("%data%", work[job].position);
+    $(".work-entry:last").append(fmtEmployer + fmtTitle);
 }
