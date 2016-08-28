@@ -68,19 +68,23 @@ if (bio.skills.length > 0) {
     }
 }
 
-for (job in work) {
-    $("#workExperience").append(HTMLworkStart);
-    
-    var fmtEmployer = HTMLworkEmployer.replace("%data%", work[job].name);
-    var fmtTitle = HTMLworkTitle.replace("%data%", work[job].position);
-    $(".work-entry:last").append(fmtEmployer + fmtTitle);
-    
-    var fmtDates = HTMLworkDates.replace("%data%", work[job].dates)
-    $(".work-entry:last").append(fmtDates);
-    
-    var fmtLocation = HTMLworkLocation.replace("%data%", work[job].location);
-    $(".work-entry:last").append(fmtLocation);
-    
-    var fmtDescription = HTMLworkDescription.replace("%data%", work[job].desc);
-    $(".work-entry:last").append(fmtDescription);
+function displayWork() {
+    for (job in work) {
+        $("#workExperience").append(HTMLworkStart);
+        
+        var fmtEmployer = HTMLworkEmployer.replace("%data%", work[job].name);
+        var fmtTitle = HTMLworkTitle.replace("%data%", work[job].position);
+        $(".work-entry:last").append(fmtEmployer + fmtTitle);
+        
+        var fmtDates = HTMLworkDates.replace("%data%", work[job].dates)
+        $(".work-entry:last").append(fmtDates);
+        
+        var fmtLocation = HTMLworkLocation.replace("%data%", work[job].location);
+        $(".work-entry:last").append(fmtLocation);
+        
+        var fmtDescription = HTMLworkDescription.replace("%data%", work[job].desc);
+        $(".work-entry:last").append(fmtDescription);
+    }
 }
+
+displayWork();
