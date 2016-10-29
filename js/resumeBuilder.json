@@ -1,0 +1,70 @@
+{
+    "bio": {
+        "name": "Ben Colborn",
+        "role": "Technical Writer",
+        "contacts": {
+            "Email": "bcolborn@gmail.com",
+            "GitHub": "https://github.com/bcolborn",
+            "Blog": "http://ditanauts.org",
+            "Linkedin": "https://www.linkedin.com/in/bencolborn"
+        },
+        "skills": [
+            "Technical writing",
+            "DITA",
+            "Git"
+        ],
+        "photo": "https://github.com/bcolborn/frontend-nanodegree-resume/blob/master/images/me.jpg"
+    },
+    "jobs": [
+        {
+            "name": "Nutanix, Inc.",
+            "position": "Director, Technical Publications",
+            "location": "San Jose, CA",
+            "dates": "November 2011-Present",
+            "desc": "Built technical publications department from one technical writer (myself) to eight writers in two locations (San Jose and Bangalore), plus an illustrator and a production specialist."
+        },
+        {
+            "name": "Citrix Systems, Inc.",
+            "position": "Principal Courseware Developer, Education",
+            "location": "Santa Clara, CA",
+            "dates": "August 2007-October 2011",
+            "desc": "Developed course material for Citrix virtualization technologies."
+        }
+    ],
+    "schools": [
+        {
+            "name": "University of Idaho",
+            "degree": "B.A.",
+            "major": "English",
+            "location": "Moscow, ID"
+        },
+        {
+            "name": "San Jose State University",
+            "degree": "M.A.",
+            "major": "TESOL",
+            "location": "San Jose, CA"
+        },
+        {
+            "name": "Katholische Universitaet Eichstaett",
+            "degree": "International Student Exchange Program participant",
+            "major": "Germanistik",
+            "location": "Eichstaett, Germany"
+        }
+    ],
+    "proj": [
+        {
+            "name": "API documentation",
+            "description": "Slate for new APIs",
+            "dates": "2016",
+            "url": "http://bcolborn.github.io/slate/",
+            "images": []
+        },
+        {
+            "name": "Nutanix support portal",
+            "description": "Single location for support and documenation",
+            "dates": "August 2014-Present",
+            "url": "https://portal.nutanix.com/#/page/docs",
+            "images": []
+        }
+    ]
+}
