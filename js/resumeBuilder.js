@@ -1,6 +1,8 @@
 var resumeData =
 "https://raw.githubusercontent.com/bcolborn/frontend-nanodegree-resume/master/js/resumeBuilder.json";
 
+var publicationData = "https://raw.githubusercontent.com/bcolborn/frontend-nanodegree-resume/master/data/Publications.csv";
+
 $.getJSON(resumeData, {
     format: "json"
 }).done(function (data) {
@@ -90,25 +92,92 @@ $.getJSON(resumeData, {
     eduDisplay();
     contactDisplay("#footerContacts");
     
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
+    if (document.getElementsByClassName('flex-item').length === 0) {
+        document.getElementById('topContacts').style.display = 'none';
     }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
+    if (document.getElementsByTagName('h1').length === 0) {
+        document.getElementById('header').style.display = 'none';
     }
-    if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
+    if (document.getElementsByClassName('work-entry').length === 0) {
+        document.getElementById('workExperience').style.display = 'none';
     }
-    if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
+    if (document.getElementsByClassName('project-entry').length === 0) {
+        document.getElementById('projects').style.display = 'none';
     }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
+    if (document.getElementsByClassName('education-entry').length === 0) {
+        document.getElementById('education').style.display = 'none';
     }
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
+    if (document.getElementsByClassName('flex-item').length === 0) {
+        document.getElementById('lets-connect').style.display = 'none';
     }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
+    if (document.getElementById('map') === null) {
+        document.getElementById('mapDiv').style.display = 'none';
     }
 });
+
+
+$.get(publicationData, {
+    format: "text"
+}).done(function (data) {
+    //console.log(data);
+    var publications = csv2obj(data);
+    console.log(publications);
+    publicationsDisplay(publications);
+});
+
+function publicationsDisplay(data) {
+    for (var item in data) {
+        $("#publications").append(HTMLpublicationStart);
+        $(".project-entry:last").append(HTMLpublicationTitle.replace("%data%",
+        data[item].Name).replace("%url%", data[item].Url));
+        $(".project-entry:last").append(HTMLpublicationDates.replace("%data%", data[item].Date));
+        $(".project-entry:last").append(HTMLpublicationDescription.replace("%data%",
+        data[item].Description));
+    }
+};
+
+function parse(row) {
+    var insideQuote = false,
+    entries =[],
+    entry =[];
+    row.split('').forEach(function (character) {
+        if (character === '"') {
+            insideQuote = ! insideQuote;
+        } else {
+            if (character == "," && ! insideQuote) {
+                entries.push(entry.join(''));
+                entry =[];
+            } else {
+                entry.push(character);
+            }
+        }
+    });
+    entries.push(entry.join(''));
+    return entries;
+}
+
+function csv2obj(csv) {
+    
+    // Split the input into lines
+    lines = csv.split('\n'),
+    
+    // Extract column names from the first line
+    columnNamesLine = lines[0],
+    columnNames = parse(columnNamesLine),
+    
+    // Extract data from subsequent lines
+    dataLines = lines.slice(1),
+    data = dataLines.map(parse);
+    
+    var dataObjects = data.map(function (arr) {
+        var dataObject = {
+        };
+        columnNames.forEach(function (columnName, i) {
+            dataObject[columnName] = arr[i];
+        });
+        return dataObject;
+    });
+    
+    //console.log(JSON.stringify(dataObjects));
+    return dataObjects;
+}
