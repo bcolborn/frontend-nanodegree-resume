@@ -1,0 +1,2 @@
+Title,Start Date,End Date,Description,Url
+QA Plugin for DITA Open Toolkit,1/2012,,"The QA Plugin for the DITA Open Toolkit processes DITA documents and returns an error report showing language, terminology, and markup violations based on user-defined rules. The project currently includes over a 100 sample rules from the Microsoft Manual of Style for Technical Publications.",http://sourceforge.net/projects/qa-plugin-dot/
