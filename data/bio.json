@@ -1,0 +1,18 @@
+{
+    "bio": {
+        "name": "Ben Colborn",
+        "role": "Technical Writer",
+        "contacts": {
+            "Email": "bcolborn@gmail.com",
+            "GitHub": "https://github.com/bcolborn",
+            "Blog": "http://ditanauts.org",
+            "Linkedin": "https://www.linkedin.com/in/bencolborn"
+        },
+        "skills": [
+            "Technical writing",
+            "DITA",
+            "Git"
+        ],
+        "photo": "https://raw.githubusercontent.com/bcolborn/frontend-nanodegree-resume/master/images/me.jpg"
+    }
+}
