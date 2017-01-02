@@ -92,6 +92,11 @@ a{
     display: block;
 }
 
+a:hover {
+    border-bottom: 1px solid;
+    
+}
+
 .welcome-message{
     font-style: italic;
     font-size: 18px;
@@ -139,6 +144,10 @@ a{
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 10px;
+}
+
+.flex-item a {
+    display: inline;
 }
 
 .flex-column{
@@ -250,6 +259,7 @@ ul.tab li a{
 /* Change background color of links on hover */
 ul.tab li a:hover{
     background-color: #ddd;
+    border-bottom: 0;
 }
 
 /* Create an active/current tablink class */

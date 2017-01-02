@@ -72,7 +72,11 @@ $.get(data.education, {
 
 function contactDisplay(contacts, id) {
     for (var item in contacts) {
-        var fmtContact = HTMLcontactGeneric.replace("%data%", contacts[item]);
+        if (contacts[item].startsWith("http")) {
+            var fmtContact = HTMLcontactWeb.replace(/%data%/g, contacts[item]);
+        } else {
+            var fmtContact = HTMLcontactGeneric.replace(/%data%/g, contacts[item]);
+        }
         fmtContact = fmtContact.replace("%contact%", item);
         $(id).append(fmtContact);
     }
