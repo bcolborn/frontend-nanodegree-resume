@@ -8,214 +8,260 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  padding:0;
-  margin:0;
-  font-family: "Roboto", sans-serif;
+h6{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
 }
 
-.clear-fix {
-  overflow: auto;
+.clear-fix{
+    overflow: auto;
 }
 
 .education-entry,
 .work-entry,
-.project-entry {
-  padding: 0 5%;
+.project-entry{
+    padding: 0 5%;
 }
 
-h1 {
-  font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
-  display: inline;
+h1{
+    font-size: 40px;
+    color: #f5a623;
+    line-height: 48px;
+    display: inline;
 }
 
-h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
+h2{
+    font-weight: bold;
+    font-size: 24px;
+    color: #999;
+    line-height: 29px;
+    padding: 10px;
 }
 
-h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
+h3{
+    font-style: italic;
+    font-size: 20px;
+    color: #000;
+    line-height: 22px;
 }
 
-h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
+h4{
+    font-weight: bold;
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 17px;
 }
 
 h2,
 h3,
 h4,
-h5 {
-  padding:10px 5%;
+h5{
+    padding: 10px 5%;
 
 }
 
 
-.date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
+.date-text{
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: left;
 }
 
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
+.location-text{
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: right;
 
 }
 
-p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
+p{
+    font-size: 14px;
+    color: #333;
+    line-height: 21px;
 }
 
-a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
+a{
+    color: #1199c3;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
+.welcome-message{
+    font-style: italic;
+    font-size: 18px;
+    color: #f3f3f3;
+    line-height: 28px;
 }
 
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
+#skills-h3{
+    color: #f5ae23;
+    display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
+.orange{
+    background-color: #f5ae23;
 }
 
-.orange-text {
-  color: #f5ae23;
+.orange-text{
+    color: #f5ae23;
 }
 
-.white-text {
-  font-weight: bold;
-  color: #fff;
+.white-text{
+    font-weight: bold;
+    color: #fff;
 }
 
-.gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear:both;
+.gray{
+    background-color: #f3f3f3;
+    padding-bottom: 10px;
+    clear: both;
 }
 
-.dark-gray {
-  background-color: #4a4a4a;
+.dark-gray{
+    background-color: #4a4a4a;
 }
 
 /* TODO: Replace with image later */
-#header {
-  background-color: #484848;
+#header{
+    background-color: #484848;
 }
 
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
+.flex-box{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding: 10px;
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px;
 }
 
-.center-content {
-  padding: 2.5% 5%;
+.center-content{
+    padding: 2.5% 5%;
 }
 
-ul {
-  list-style-type: none;
+ul{
+    list-style-type: none;
 }
 
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
+.biopic{
+    float: left;
+    padding: 10px;
+    width: 200px;
+    display: none;
 }
 
-img {
-  padding: 10px;
+img{
+    padding: 10px;
 }
 
-span {
-  padding: 5px;
+span{
+    padding: 5px;
 }
 
-#lets-connect {
-  text-align: center;
+#lets-connect{
+    text-align: center;
 }
 
 /* Media queries to handle various device widths */
 
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
+@media only screen and (max-width : 1024px){
+    #lets-connect{
+        margin-top: 5%;
+    }
 }
 
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
+@media only screen and (max-width : 900px){
+    .biopic{
+        width: 175px;
+    }
 }
 
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+@media only screen and (max-width : 750px){
+    #lets-connect{
+        margin-top: 10%;
+    }
+    .biopic{
+        width: 150px;
+    }
+    .welcome-message{
+        display: none;
+    }
 }
 
-#map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
+#map{
     display: block;
-  }
+    height: 100%;
+    margin: 0 5%;
+}
+
+#mapDiv{
+    height: 400px;
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+@media only screen and (min-width : 750px){
+    #skills-h3,
+    .biopic{
+        display: block;
+    }
+}
+
+/*  http://www.w3schools.com/howto/howto_js_tabs.asp */
+/* Style the list */
+ul.tab{
+    list-style-type: none;
+    margin: 0;
+    padding: 0 5%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Float the list items side by side */
+ul.tab li{
+    float: left;
+}
+
+/* Style the links inside the list items */
+ul.tab li a{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover{
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus,
+.active{
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
