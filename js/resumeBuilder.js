@@ -41,7 +41,7 @@ $.get(data.projects, {
     format: "text"
 }).done(function (data) {
     var projects = csv2obj(data)
-    console.log(projects);
+    //console.log(projects);
     projectsDisplay(projects);
     if (document.getElementsByClassName('project-entry').length === 0) {
         document.getElementById('projects').style.display = 'none';
@@ -100,6 +100,12 @@ function bioDisplay(bio) {
 }
 
 function workDisplay(jobs) {
+    jobs = jobs.sort(function (a, b) {
+        var a_year = a.StartDate.split("/")[1];
+        var b_year = b.StartDate.split("/")[1];
+        return parseFloat(b_year) - parseFloat(a_year);
+    });
+    
     for (var item in jobs) {
         $("#workExperience").append(HTMLworkStart);
         
@@ -107,7 +113,7 @@ function workDisplay(jobs) {
         var fmtTitle = HTMLworkTitle.replace("%data%", jobs[item].Title);
         $(".work-entry:last").append(fmtEmployer + fmtTitle);
         
-        var dates = jobs[item].StartDate + " to " + jobs[item].EndDate;
+        var dates = convertDate(jobs[item].StartDate) + " to " + convertDate(jobs[item].EndDate);
         var fmtDates = HTMLworkDates.replace("%data%", dates)
         $(".work-entry:last").append(fmtDates);
         
@@ -129,11 +135,16 @@ function projectsDisplay(proj) {
 };
 
 function publicationsDisplay(pubs) {
+    pubs = pubs.sort(function (a, b) {
+        var a_year = a.Date.split("/")[1];
+        var b_year = b.Date.split("/")[1];
+        return parseFloat(b_year) - parseFloat(a_year);
+    });
     for (var item in pubs) {
         $("#publications").append(HTMLpublicationStart);
         $(".project-entry:last").append(HTMLpublicationTitle.replace("%data%",
         pubs[item].Name).replace("%url%", pubs[item].Url));
-        $(".project-entry:last").append(HTMLpublicationDates.replace("%data%", pubs[item].Date));
+        $(".project-entry:last").append(HTMLpublicationDates.replace("%data%", convertDate(pubs[item].Date)));
         $(".project-entry:last").append(HTMLpublicationDescription.replace("%data%",
         pubs[item].Publisher));
         $(".project-entry:last").append(HTMLpublicationDescription.replace("%data%",
@@ -189,7 +200,7 @@ function csv2obj(csv) {
     // Extract column names from the first line
     columnNamesLine = lines[0].replace(/\s+/g, "");
     columnNames = parse(columnNamesLine);
-    console.log(columnNames);
+    //console.log(columnNames);
     
     // Extract data from subsequent lines
     dataLines = lines.slice(1);
@@ -206,4 +217,24 @@ function csv2obj(csv) {
     
     //console.log(JSON.stringify(dataObjects));
     return dataObjects;
+}
+
+function convertDate(mmyyyy) {
+    if (mmyyyy.match(/\d{1,2}\/\d{4}/)) {
+        var month = mmyyyy.split("/")[0] -1;
+        var year = mmyyyy.split("/")[1];
+        var d = new Date(year, month);
+        locale = "en-us",
+        month = d.toLocaleString(locale, {
+            month: "long"
+        });
+        year = d.toLocaleString(locale, {
+            year: "numeric"
+        });
+        date = month + " " + year;
+        //console.log(date);
+    } else {
+        date = 'Present';
+    }
+    return date;
 }
