@@ -21,7 +21,7 @@ h6{
 .education-entry,
 .work-entry,
 .project-entry{
-    padding: 0 5%;
+    padding: 0 15%;
 }
 
 h1{
@@ -57,10 +57,9 @@ h2,
 h3,
 h4,
 h5{
-    padding: 10px 5%;
+    padding: 10px 15%;
 
 }
-
 
 .date-text{
     font-style: italic;
@@ -92,9 +91,9 @@ a{
     display: block;
 }
 
-a:hover {
+a:hover{
     border-bottom: 1px solid;
-    
+
 }
 
 .welcome-message{
@@ -146,7 +145,7 @@ a:hover {
     padding: 10px;
 }
 
-.flex-item a {
+.flex-item a{
     display: inline;
 }
 
@@ -158,7 +157,7 @@ a:hover {
 }
 
 .center-content{
-    padding: 2.5% 5%;
+    padding: 2.5% 15% 0;
 }
 
 ul{
@@ -182,6 +181,9 @@ span{
 
 #lets-connect{
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Media queries to handle various device widths */
@@ -213,13 +215,13 @@ span{
 #map{
     display: block;
     height: 100%;
-    margin: 0 5%;
+    margin: 0 15%;
 }
 
 #mapDiv{
     height: 400px;
     width: 100%;
-    padding-bottom: 5%;
+    padding-bottom: 15%;
 }
 
 @media only screen and (min-width : 750px){
@@ -234,10 +236,9 @@ span{
 ul.tab{
     list-style-type: none;
     margin: 0;
-    padding: 0 5%;
+    padding: 0 15%;
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    background-color: #484848;
 }
 
 /* Float the list items side by side */
@@ -248,7 +249,7 @@ ul.tab li{
 /* Style the links inside the list items */
 ul.tab li a{
     display: inline-block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -259,19 +260,20 @@ ul.tab li a{
 /* Change background color of links on hover */
 ul.tab li a:hover{
     background-color: #ddd;
+    color: black;
     border-bottom: 0;
 }
 
 /* Create an active/current tablink class */
 ul.tab li a:focus,
-.active{
-    background-color: #ccc;
+ul.tab li a.active{
+    background-color: white;
+    color: black;
 }
 
 /* Style the tab content */
 .tabcontent{
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
     border-top: none;
 }

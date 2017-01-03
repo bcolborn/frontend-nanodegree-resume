@@ -11,7 +11,6 @@ $.getJSON(data.bio, {
 }).done(function (data) {
     //console.log(data);
     
-    contactDisplay(data.bio.contacts, "#topContacts");
     bioDisplay(data.bio);
     eduDisplay(data.schools);
     contactDisplay(data.bio.contacts, "#footerContacts");
