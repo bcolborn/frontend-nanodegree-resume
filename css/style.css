@@ -15,6 +15,10 @@ h6{
     color: #0a1612;
 }
 
+#main{
+    margin-bottom: 50px;
+}
+
 .clear-fix{
     overflow: auto;
 }
@@ -44,7 +48,7 @@ h3{
     font-size: 16pt;
     color: #7D98A1;
     line-height: 22px;
-    margin: 16px 0 8px;
+    margin: 32px 0 8px;
 }
 
 h4{
@@ -54,19 +58,38 @@ h4{
     line-height: 17px;
 }
 
-.major,
 .date-text{
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: bold;
     color: #1a2930;
     line-height: 16px;
-    float: left;
+    display: inline;
+}
+
+.employer {
+    display: inline;
+    float: right;
+    font-size: 14pt;
+}
+
+.publisher{
+    font-size: 14px;
+    color: #1a2930;
+    font-style: italic;
+    display: block;
+    margin-bottom: 8px;
 }
 
 .location-text{
-    font-size: 14px;
+    font-size: 12px;
+        font-weight: bold;
     color: #1a2930;
-    line-height: 16px;
     float: right;
+    display: inline;
+}
+
+.description{
+    margin-top: 8px;
 }
 
 p{
@@ -145,8 +168,8 @@ ul{
 
 .biopic{
     float: left;
-    padding: 10px;
-    width: 200px;
+    padding: 10px 20px 10px 0;
+    width: 175px;
     display: none;
 }
 

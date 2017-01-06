@@ -110,7 +110,7 @@ function workDisplay(jobs) {
         
         var fmtEmployer = HTMLworkEmployer.replace("%data%", jobs[item].CompanyName);
         var fmtTitle = HTMLworkTitle.replace("%data%", jobs[item].Title);
-        $(".work-entry:last").append(fmtEmployer + fmtTitle);
+        $(".work-entry:last").append(fmtTitle + fmtEmployer);
         
         var dates = convertDate(jobs[item].StartDate) + " to " + convertDate(jobs[item].EndDate);
         var fmtDates = HTMLworkDates.replace("%data%", dates)
@@ -143,9 +143,9 @@ function publicationsDisplay(pubs) {
         $("#publications").append(HTMLpublicationStart);
         $(".project-entry:last").append(HTMLpublicationTitle.replace("%data%",
         pubs[item].Name).replace("%url%", pubs[item].Url));
-        $(".project-entry:last").append(HTMLpublicationDates.replace("%data%", convertDate(pubs[item].Date)));
-        $(".project-entry:last").append(HTMLpublicationDescription.replace("%data%",
+        $(".project-entry:last").append(HTMLpublicationPublisher.replace("%data%",
         pubs[item].Publisher));
+        $(".project-entry:last").append(HTMLpublicationDates.replace("%data%", convertDate(pubs[item].Date)));
         $(".project-entry:last").append(HTMLpublicationDescription.replace("%data%",
         pubs[item].Description));
     }
