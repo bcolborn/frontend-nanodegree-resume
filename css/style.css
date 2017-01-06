@@ -12,6 +12,7 @@ h6{
     padding: 0;
     margin: 0;
     font-family: "Roboto", sans-serif;
+    color: #0a1612;
 }
 
 .clear-fix{
@@ -26,7 +27,7 @@ h6{
 
 h1{
     font-size: 40px;
-    color: #f5a623;
+    color: #f7ce3e;
     line-height: 48px;
     display: inline;
 }
@@ -40,10 +41,10 @@ h2{
 }
 
 h3{
-    font-style: italic;
-    font-size: 20px;
-    color: #000;
+    font-size: 16pt;
+    color: #7D98A1;
     line-height: 22px;
+    margin: 16px 0 8px;
 }
 
 h4{
@@ -53,41 +54,30 @@ h4{
     line-height: 17px;
 }
 
-h2,
-h3,
-h4,
-h5{
-    padding: 10px 15%;
-
-}
-
+.major,
 .date-text{
-    font-style: italic;
     font-size: 14px;
-    color: #999;
+    color: #1a2930;
     line-height: 16px;
     float: left;
 }
 
 .location-text{
-    font-style: italic;
     font-size: 14px;
-    color: #999;
+    color: #1a2930;
     line-height: 16px;
     float: right;
-
 }
 
 p{
     font-size: 14px;
-    color: #333;
+    color: #0a1612;
     line-height: 21px;
 }
 
 a{
-    color: #1199c3;
+    color: #7D98A1;
     text-decoration: none;
-    margin-top: 10px;
     display: block;
 }
 
@@ -96,33 +86,22 @@ a:hover{
 
 }
 
-.welcome-message{
-    font-style: italic;
-    font-size: 18px;
-    color: #f3f3f3;
-    line-height: 28px;
-}
-
 #skills-h3{
-    color: #f5ae23;
+    color: #f7ce3e;
     display: none;
 }
 
-.orange{
-    background-color: #f5ae23;
-}
-
 .orange-text{
-    color: #f5ae23;
+    color: #f7ce3e;
 }
 
 .white-text{
     font-weight: bold;
-    color: #fff;
+    color: #c5c1c0;
 }
 
 .gray{
-    background-color: #f3f3f3;
+    background-color: #5E6572;
     padding-bottom: 10px;
     clear: both;
 }
@@ -133,7 +112,7 @@ a:hover{
 
 /* TODO: Replace with image later */
 #header{
-    background-color: #484848;
+    background-color: #1a2930;
 }
 
 .flex-box{
@@ -184,6 +163,7 @@ span{
     position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: #1a2930;
 }
 
 /* Media queries to handle various device widths */
@@ -238,7 +218,7 @@ ul.tab{
     margin: 0;
     padding: 0 15%;
     overflow: hidden;
-    background-color: #484848;
+    background-color: #1a2930;
 }
 
 /* Float the list items side by side */
@@ -249,18 +229,19 @@ ul.tab li{
 /* Style the links inside the list items */
 ul.tab li a{
     display: inline-block;
-    color: white;
+    color: #c5c1c0;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     transition: 0.3s;
     font-size: 17px;
+    font-weight: bold;
 }
 
 /* Change background color of links on hover */
 ul.tab li a:hover{
     background-color: #ddd;
-    color: black;
+    color: #0a1612;
     border-bottom: 0;
 }
 
@@ -268,7 +249,8 @@ ul.tab li a:hover{
 ul.tab li a:focus,
 ul.tab li a.active{
     background-color: white;
-    color: black;
+    color: #0a1612;
+    font-weight: bold;
 }
 
 /* Style the tab content */
@@ -276,4 +258,5 @@ ul.tab li a.active{
     display: none;
     padding: 6px 12px;
     border-top: none;
+    background-color: white;
 }
