@@ -1,2 +1,5 @@
 Title,Start Date,End Date,Description,Url
+Dynamic resume,7/2016,,Based on the Udacity frontend nanodegree resume project.,https://github.com/bcolborn/resume
 QA Plugin for DITA Open Toolkit,1/2012,,"The QA Plugin for the DITA Open Toolkit processes DITA documents and returns an error report showing language, terminology, and markup violations based on user-defined rules. The project currently includes over a 100 sample rules from the Microsoft Manual of Style for Technical Publications.",http://sourceforge.net/projects/qa-plugin-dot/
+Nutanix developer documentation,1/2017,,"Developer documentation (API reference, tutorials, etc.) for Nutanix APIs.",http://developer.nutanix.com/
+Nutanix technical documentation,8/2014,,"Software, hardware, and release documentation for Nutanix products are hosted on the Nutanix support portal, which was developed in-house.",https://portal.nutanix.com/#/page/docs
