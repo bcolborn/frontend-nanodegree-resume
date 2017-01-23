@@ -21,6 +21,8 @@ var HTMLcontactWeb = '<li class="flex-item"><span class="orange-text">%contact%<
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
+var HTMLgeneralDescription = '<div class="description">%data%</div>';
+
 var HTMLskillsStart = '<h3 id="skills-h3">Skills</h3><ul id="skills" class="flex-column"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
@@ -29,23 +31,20 @@ var HTMLworkTitle = '<h3 class="title">%data%';
 var HTMLworkEmployer = '<div class="employer">%data%</div></h3>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<div class="description">%data%</div>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<h3><a href="%url%">%data%</a></h3>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<div class="description">%data%</div>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLpublicationStart = '<div class="project-entry"></div>';
 var HTMLpublicationTitle = '<h3><a href="%url%">%data%</a></h3>';
 var HTMLpublicationDates = '<div class="date-text">%data%</div>';
 var HTMLpublicationPublisher = '<div class="publisher">%data%</div>';
-var HTMLpublicationDescription = '<div class="description">%data%</div>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<h3>%data%';
-var HTMLschoolDegree = ' - %data%</h3>';
+var HTMLschoolDegree = '<h3 class="degree">%data%';
+var HTMLschoolName = '<div class="school">%data%</div></h3>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div><br/>';
 var HTMLschoolMajor = '<div class="major">Major: %data%</div>';

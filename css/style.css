@@ -66,10 +66,15 @@ h4{
     display: inline;
 }
 
-.employer {
+.employer,
+.school {
     display: inline;
     float: right;
     font-size: 14pt;
+}
+
+.major {
+    display: inline;
 }
 
 .publisher{
@@ -82,7 +87,7 @@ h4{
 
 .location-text{
     font-size: 12px;
-        font-weight: bold;
+    font-weight: bold;
     color: #1a2930;
     float: right;
     display: inline;
