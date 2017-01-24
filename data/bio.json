@@ -1,7 +1,6 @@
 {
     "bio": {
-        "name": "Ben Colborn",
-        "role": "Technical Writer",
+        "role": "Information developer/manager",
         "contacts": {
             "Email": "bcolborn@gmail.com",
             "GitHub": "https://github.com/bcolborn",
@@ -9,8 +8,10 @@
             "Linkedin": "https://www.linkedin.com/in/bencolborn"
         },
         "skills": [
-            "Technical writing",
-            "DITA",
+            "Technical writing in the IT domain",
+            "Structured information management and automation",
+            "Developmental and copy editing",
+            "DITA, DITA Open Toolkit, XSLT",
             "Git"
         ],
         "photo": "https://raw.githubusercontent.com/bcolborn/frontend-nanodegree-resume/master/images/me.jpg"
