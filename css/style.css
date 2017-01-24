@@ -143,12 +143,10 @@ p{
 a{
     color: #7D98A1;
     text-decoration: none;
-    display: block;
 }
 
 a:hover{
-    border-bottom: 1px solid;
-
+    border-bottom: 2px solid;
 }
 
 #role {
