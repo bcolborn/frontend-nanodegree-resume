@@ -25,7 +25,8 @@ h6{
 
 .education-entry,
 .work-entry,
-.project-entry{
+.project-entry,
+.publication-entry{
     padding: 0 15%;
 }
 

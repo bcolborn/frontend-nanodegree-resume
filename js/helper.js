@@ -42,7 +42,7 @@ var HTMLprojectTitle = '<h3><a href="%url%">%data%</a></h3>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectImage = '<img src="%data%">';
 
-var HTMLpublicationStart = '<div class="project-entry"></div>';
+var HTMLpublicationStart = '<div class="publication-entry"></div>';
 var HTMLpublicationTitle = '<h3><a href="%url%">%data%</a></h3>';
 var HTMLpublicationDates = '<div class="date-text">%data%</div>';
 var HTMLpublicationPublisher = '<div class="publisher">%data%</div>';
