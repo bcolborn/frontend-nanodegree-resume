@@ -1,5 +1,6 @@
     var data = {
         "bio": "https://raw.githubusercontent.com/bcolborn/frontend-nanodegree-resume/master/data/bio.json",
+        "profile": "https://raw.githubusercontent.com/bcolborn/frontend-nanodegree-resume/master/data/Profile.csv",
         "education": "https://raw.githubusercontent.com/bcolborn/frontend-nanodegree-resume/master/data/Education.csv",
         "jobs": "https://raw.githubusercontent.com/bcolborn/frontend-nanodegree-resume/master/data/Positions.csv",
         "projects": "https://raw.githubusercontent.com/bcolborn/frontend-nanodegree-resume/master/data/Projects.csv",
@@ -11,18 +12,18 @@
     }).done(function (data) {
         //console.log(data);
         bioDisplay(data.bio);
-        eduDisplay(data.schools);
         contactDisplay(data.bio.contacts, "#footerContacts");
         
         if (document.getElementsByClassName('flex-item').length === 0) {
-            document.getElementById('topContacts').style.display = 'none';
-        }
-        if (document.getElementsByTagName('h1').length === 0) {
-            document.getElementById('header').style.display = 'none';
-        }
-        if (document.getElementsByClassName('flex-item').length === 0) {
             document.getElementById('lets-connect').style.display = 'none';
         }
+    });
+
+    $.get(data.profile, {
+        format: "text"
+    }).done(function (data) {
+        var profile = csv2obj(data)
+        profileDisplay(profile);
     });
 
     $.get(data.jobs, {
@@ -80,18 +81,24 @@
         }
     }
 
-    function bioDisplay(bio) {
-        $("#header").append(HTMLheaderName.replace("%data%", bio.name));
-        
+    function bioDisplay(bio) {        
         $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
         
-        $("#header").append(HTMLbioPic.replace("%data%", bio.photo));
+        $("#header").append(HTMLflexWrap);
+        $("#header-flex-wrap").append(HTMLbioPic.replace("%data%", bio.photo));
         
-        $("#header").append(HTMLskillsStart);
+        $("#header-flex-wrap").append(HTMLskillsStart);
         for (var item in bio.skills) {
             var fmtSkill = HTMLskills.replace("%data%", bio.skills[item]);
-            $("#skills").append(fmtSkill);
+            $("#skills-list").append(fmtSkill);
         }
+    }
+
+    function profileDisplay(profile) {
+        $("#header").prepend(HTMLheaderName.replace("%data%", profile[0].FirstName + " " + profile[0].LastName));
+        
+        $("#skills").before(HTMLsummaryStart);
+        $("#summary").append(HTMLsummary.replace("%data%", profile[0].Summary));     
     }
 
     function workDisplay(jobs) {
@@ -122,7 +129,7 @@
             $("#projects").append(HTMLprojectStart);
             $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", proj[item].Title).replace("%url%", proj[item].Url));
             $(".project-entry:last").append(HTMLgeneralDescription.replace("%data%",
-            proj[item].Description));
+                proj[item].Description));
         }
     };
 
@@ -135,11 +142,11 @@
         for (var item in pubs) {
             $("#publications").append(HTMLpublicationStart);
             $(".project-entry:last").append(HTMLpublicationTitle.replace("%data%",
-            pubs[item].Name).replace("%url%", pubs[item].Url));
+                pubs[item].Name).replace("%url%", pubs[item].Url));
             $(".project-entry:last").append(HTMLpublicationPublisher.replace("%data%", pubs[item].Publisher));
             $(".project-entry:last").append(HTMLpublicationDates.replace("%data%", convertDate(pubs[item].Date)));
             $(".project-entry:last").append(HTMLgeneralDescription.replace("%data%",
-            pubs[item].Description));
+                pubs[item].Description));
         }
     };
 
@@ -154,13 +161,13 @@
             $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", schools[item].Major));
             
             $(".education-entry:last").append(HTMLschoolLocation.replace("%data%",
-            schools[item].Location));
+                schools[item].Location));
 
             $(".education-entry:last").append(HTMLgeneralDescription.replace("%data%",
-            schools[item].Notes));
+                schools[item].Notes));
 
             $(".education-entry:last").append(HTMLgeneralDescription.replace("%data%",
-            "Activities: " + schools[item].Activities));
+                "Activities: " + schools[item].Activities));
         }
     }
 
@@ -188,7 +195,7 @@
     }
 
     function csv2obj(csv) {
-        
+
         // Split the input into lines
         lines = csv.split('\n').filter(String);
         

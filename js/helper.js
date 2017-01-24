@@ -12,19 +12,24 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span class="white-text">%data%</span><hr>';
-
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLcontactWeb = '<li class="flex-item"><span class="orange-text">%contact%</span><a class="white-text" href="%data%">%data%</a></li>';
-
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLgeneralDescription = '<div class="description">%data%</div>';
+var HTMLflexWrap = '<div id="header-flex-wrap" class="flex-wrap"></div>'
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLheaderName = '<h1 id="name">%data%</h1>';
+var HTMLheaderRole = '<span id="role" class="white-text">%data%</span><hr>';
+
+var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text contact">%contact%</span><span class="white-text contact">%data%</span></li>';
+var HTMLcontactWeb = '<li class="flex-item"><span class="orange-text contact">%contact%</span><a class="white-text contact" href="%data%">%data%</a></li>';
+
+var HTMLbioPic = '<div id="biopic><img src="%data%" class="biopic"></img></div>';
+var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+
+var HTMLsummaryStart = '<div id="summary"><h4 class="header-h4">Summary</h3></div>';
+var HTMLsummary = '<span class="white-text">%data%</span>';
+
+var HTMLskillsStart = '<div id="skills"><h4 class="header-h4">Skills</h3><ul id="skills-list" class="flex-column white-text"></ul></div>';
+var HTMLskills = '<li class="flex-item orange-text"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkTitle = '<h3 class="title">%data%';
@@ -57,7 +62,6 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
-
 
 /*
 The Internationalize Names challenge found in the lesson Flow Control from JavaScript Basics requires you to create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.

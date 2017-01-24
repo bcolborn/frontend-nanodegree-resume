@@ -58,6 +58,42 @@ h4{
     line-height: 17px;
 }
 
+.header-h4{
+    font-size: 17px;
+    color: #f7ce3e;
+    padding-bottom: 10px;
+}
+
+#header{
+    background-color: #1a2930;
+}
+
+#header-flex-wrap {
+  display: flex;
+  padding-bottom: 20px;
+}
+#biopic {
+  flex: 0 0 35%;
+}
+#summary {
+    flex: 0 0 40%;
+}
+#skills {
+  flex: 1;
+}
+
+#summary,
+#skills {
+    padding: 10px;
+    margin: 10px 0 10px 10px;
+    background-color: #0a1612;
+}
+
+#skills-list {
+    margin: 0 10px;
+    padding-top: 0;
+}
+
 .date-text{
     font-size: 12px;
     font-weight: bold;
@@ -114,9 +150,10 @@ a:hover{
 
 }
 
-#skills-h3{
-    color: #f7ce3e;
-    display: none;
+#role {
+    float: right;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .orange-text{
@@ -124,7 +161,6 @@ a:hover{
 }
 
 .white-text{
-    font-weight: bold;
     color: #c5c1c0;
 }
 
@@ -136,11 +172,6 @@ a:hover{
 
 .dark-gray{
     background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
-#header{
-    background-color: #1a2930;
 }
 
 .flex-box{
@@ -167,10 +198,6 @@ a:hover{
     padding: 2.5% 15% 0;
 }
 
-ul{
-    list-style-type: none;
-}
-
 .biopic{
     float: left;
     padding: 10px 20px 10px 0;
@@ -182,8 +209,8 @@ img{
     padding: 10px;
 }
 
-span{
-    padding: 5px;
+span.contact {
+    margin: 5px;
 }
 
 #lets-connect{
@@ -192,6 +219,10 @@ span{
     bottom: 0;
     width: 100%;
     background-color: #1a2930;
+}
+
+#lets-connect .ul {
+    list-style-type: none;
 }
 
 /* Media queries to handle various device widths */
