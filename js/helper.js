@@ -22,7 +22,7 @@ var HTMLheaderRole = '<span id="role" class="white-text">%data%</span><hr>';
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text contact">%contact%</span><span class="white-text contact">%data%</span></li>';
 var HTMLcontactWeb = '<li class="flex-item"><span class="orange-text contact">%contact%</span><a class="white-text contact" href="%data%">%data%</a></li>';
 
-var HTMLbioPic = '<div id="biopic><img src="%data%" class="biopic"></img></div>';
+var HTMLbioPic = '<div id="biopic"><img src="%data%" class="biopic"></img></div>';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLsummaryStart = '<div id="summary"><h4 class="header-h4">Summary</h3></div>';
